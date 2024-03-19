@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign-In</title>
+  <link rel="stylesheet" href="./style/footer.css">
+  <link rel="stylesheet" href="./style/nav.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- ********************************navbar*********************************** -->
+  <nav class="navbar">
+
+    <div class="nav-searchbar">
+      <div id="logo">
+        <img src="https://github.com/Pujansharma/Brookstone/assets/113420172/203ef402-8d3c-4679-aa69-e1a5b1985511"
+          id="logo-image">
+      </div>
+      <div class="search">
+        <input type="text" id="search-input" placeholder="Search">
+
+      </div>
+      <div class="icon-search">
+        <!-- <img src="" > -->
+        <img id="search-icon" src="https://cdn-icons-png.flaticon.com/512/482/482631.png" alt="searchicon">
+      </div>
+      <div class="cart-login">
+
+        <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/add-user-2513329-2104653.png?f=avif&w=256"
+          id="user-icon">
+        <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/love-1419433-1198271.png?f=avif&w=256"
+          id="favorite-icon">
+        <img src="https://cdn.iconscout.com/icon/free/png-512/cart-3731224-3112098.png?f=avif&w=256" id="cart-icon">
+      </div>
+    </div>
+
+    <div class="drop-downs">
+      <p id="new-product-page">New</p>
+      <p id="Massage" onmouseover={MassagePopup()} onmouseleave={Massageleave()}>Massage</p>
+      <p id="Wellness" onmouseover={WellnessPopup()} onmouseleave="{Wellnessleave()}">Wellness</p>
+      <p id="Sleep" onmouseover={SleepPopup()} onmouseleave="{Sleepleave()}">Sleep</p>
+      <p id="Home" onmouseover={SleepPopup()} onmouseleave="{Sleepleave()}">Home</p>
+      <!-- <p>Home</p> -->
+      <p>Wine & Bar</p>
+      <p>Outdoor</p>
+      <p>Technology</p>
+      <p>Travel</p>
+      <p>Accessories</p>
+      <p>Entertainment</p>
+      <p>Gifts</p>
+      <p>Sale</p>
+    </div>
+  </nav>
+
+
+  <!-- ***********************************************Signin************************ -->
+  <div class="sign-in-container">
+    <div class="sign-in-heading">
+      <h3>Sign in to your account</h3>
+      <p id="our-brand">Our brand new site is live. Please create a new account to explore this experience.</p>
+    </div>
+    <div class="login-register">
+      <div class="login">
+        <h2>Login</h2>
+        <p>If you have an account, please sign in with your email address.</p>
+        <label for="email">Email</label><br>
+        <input type="text" id="email-login"><br>
+        <label for="pass">Password</label><br>
+        <input type="password" id="pass-login"><br>
+        <button id="sign-in-btn" onclick="login()">SIGN IN</button>
+        <p>Forget your password ?</p>
+      </div>
+      <div class="register">
+        <h2>Create Customer</h2>
+        <p>Creating an account has many benefits: check out faster, keep more than one address, track orders and
+          more.</p>
+        <form id="form">
+          <label for="firstName">First Name</label><br>
+          <input id="firstName" type="text"><br>
+          <label for="lastName">Last Name</label><br>
+          <input type="text" id="lastName"><br>
+          <label for="email">Email</label><br>
+          <input type="text" id="email"><br>
+          <label for="password">Password</label><br>
+          <input type="password" id="pass"><br>
+
+        </form>
+        <button id="submit-btn" onclick="singup()">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+  <!-- ***********************************FOOTER*************************************** -->
+
+  <footer class="padding_4x" style="margin-top: 20px;">
+    <div class="flex">
+      <section class="flex-content padding_1x">
+        <h3>About</h3>
+        <a href="#" style="color: white;">Zoom Blog</a>
+        <a href="#" style="color: white;">Customers</a>
+        <a href="#" style="color: white;">Our Team</a>
+        <a href="#" style="color: white;">Careers</a>
+        <a href="#" style="color: white;">Integrations</a>
+
+      </section>
+      <section class="flex-content padding_1x">
+        <h3>Download</h3>
+        <a href="#" style="color: white;">Meetings Client</a>
+        <a href="#" style="color: white;">Zoom Rooms Client</a>
+        <a href="#" style="color: white;">Zoom Rooms Controller</a>
+        <a href="#" style="color: white;">Browser Extension</a>
+        <a href="#" style="color: white;">Outlook Plug-in</a>
+      </section>
+      <section class="flex-content padding_1x">
+        <h3>Sales
+        </h3>
+        <a href="#" style="color: white;">1.888.799.9666</a>
+        <a href="#" style="color: white;">Contact Sales</a>
+        <a href="#" style="color: white;">Plans & Pricing</a>
+        <a href="#" style="color: white;">Request a Demo</a>
+        <a href="#" style="color: white;">Webinars and Events</a>
+      </section>
+      <section class="flex-content padding_1x">
+        <h3>Support
+        </h3>
+        <a href="#" style="color: white;">Test Talkies</a>
+        <a href="#" style="color: white;">Account</a>
+        <a href="#" style="color: white;">Support Center</a>
+        <a href="#" style="color: white;">Learning Center</a>
+        <a href="#" style="color: white;">Feedback</a>
+        <a href="#" style="color: white;">Contact Us</a>
+      </section>
+      <section class="flex-content padding_1x">
+        <h3 style="color: white;">Newsletter</h3>
+        <p style="color: white;">You can trust us. we only send promo offers,</p>
+        <fieldset class="fixed_flex">
+
+
+        </fieldset>
+      </section>
+
+    </div>
+    <div class="flex">
+      <section class="flex-content padding_1x">
+        <p>Copyright ©2023 All rights reserved || Talkies - Let's connect</p>
+      </section>
+      <section class="flex-content padding_1x">
+        <a href="https://www.facebook.com/zoom"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/zoom"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/zoom/"><i class="fa fa-dribbble"></i></a>
+        <a href="https://www.linkedin.com/company/zoom-video-communications/"><i class="fa fa-linkedin"></i></a>
+      </section>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+<script src="./script/login.js"></script>
